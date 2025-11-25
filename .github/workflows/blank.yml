@@ -1,0 +1,15 @@
+name: Unzip Archive
+on: [push]  # Запустится после загрузки zip
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Unzip
+        run: |
+          unzip final_6_1_0_2.zip -d ./
+          rm final_6_1_0_2.zip  # Удалить zip после
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Unzipped project files"
