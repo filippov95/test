@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<ArrayOfEntryPoint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<EntryPoint>
+		<NFOType>SSDNEMED</NFOType>
+		<ReportType>zapr</ReportType>
+		<ReportPeriodType>r</ReportPeriodType>
+		<PathToXsd>../www.cbr.ru/xbrl/nso/ins/rep/2025-04-15/ep/ep_nso_ins_oper_Zhizn.xsd</PathToXsd>
+		<NFOTypeRus>Страховщик, осуществляющий страхование жизни</NFOTypeRus>
+		<ReportTypeRus>Информация о договорах страхования жизни, представляемая по запросу</ReportTypeRus>
+		<ReportPeriodTypeRus>На нерегулярной основе</ReportPeriodTypeRus>
+	</EntryPoint>
+</ArrayOfEntryPoint>

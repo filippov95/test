@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<tp:taxonomyPackage xmlns:tp="http://xbrl.org/2016/taxonomy-package" xml:lang="ru">
+  <tp:identifier>http://www.cbr.ru/xbrl/2025-04-15.zip</tp:identifier>
+  <tp:name>Таксономия XBRL Банка России по запросам версия 6.1.0.2 (оперативная по страхованию жизни со скорректированными контрольными соотношениями)</tp:name>
+  <tp:version>6.1.0.2</tp:version>
+    <tp:entryPoints>
+	   <tp:entryPoint>      
+	       <tp:name>ep_nso_ins_oper_Zhizn</tp:name>      
+	       <tp:description>Страховщик, осуществляющий страхование жизни. Информация о договорах страхования жизни, представляемая по запросу. На нерегулярной основе</tp:description>      
+	       <tp:entryPointDocument href="http://www.cbr.ru/xbrl/nso/ins/rep/2025-04-15/ep/ep_nso_ins_oper_Zhizn.xsd"/>    
+	   </tp:entryPoint>
+	   <tp:entryPoint>      
+	       <tp:name>support_ep_all_ins_oper_Zhizn</tp:name>      
+	       <tp:description>Справочно - все раскрытия в отношении договоров страхования жизни</tp:description>      
+	       <tp:entryPointDocument href="http://www.cbr.ru/xbrl/nso/ins/rep/2025-04-15/ep/support_ep_all_ins_oper_Zhizn.xsd"/>    
+	    </tp:entryPoint>
+	</tp:entryPoints>
+</tp:taxonomyPackage>
