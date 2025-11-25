@@ -1,15 +1,31 @@
-name: Unzip Archive
-on: [push]  # Запустится после загрузки zip
+name: Unzip on Push
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   unzip:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Unzip
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Unzip all ZIP files
         run: |
-          unzip test/final_6_1_0_2.zip -d ./
-          rm test/final_6_1_0_2.zip  # Удалить zip после
+          for f in *.zip; do
+            [ -e "$f" ] || continue
+            unzip -o "$f" -d .
+          done
+
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Unzipped project files"
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Auto-unzip ZIP files" || echo "Nothing to commit"
+
+      - name: Push changes
+        run: |
+          git push
